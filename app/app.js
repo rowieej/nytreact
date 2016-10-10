@@ -1,12 +1,18 @@
 // Include the Main React Dependencies
-import React from 'react';
-import ReactDOM from 'react-dom';
+var React = require('react');
+var ReactDOM = require('react-dom');
 
+// Grab the proeprty associated with the Router
+var Router = require('react-router').Router
 
+// Grabs the Routes
+var routes = require('./config/routes');
 
-// This code here allows us to render our main component (in this case "Main")
+// Renders the contents according to the route page. 
+// Displays the contents in the div app of index.html
+// Note how ReactDOM takes in two parameters (the contents and the location)
 ReactDOM.render(
 
-  <h1>test</h1>,
+  <Router>{routes}</Router>,
   document.getElementById('app')
 )
